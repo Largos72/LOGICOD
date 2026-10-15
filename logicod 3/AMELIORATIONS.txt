@@ -1,0 +1,21 @@
+LOGICOD V2 — AMÉLIORATIONS INCLUSES
+
+1. Vue d'ensemble : suppression du bouton « Nouvelle commande » en haut à droite.
+2. Commandes : bouton « Nouvelle commande » conservé dans l'onglet Commandes.
+3. Commandes : ouverture du détail par double-clic sur une ligne ; suppression de l'action flèche pour ouvrir le détail.
+4. Import Excel/CSV : accès direct depuis Commandes, aperçu des 5 premières lignes, rappel du format attendu et téléchargement du modèle CSV.
+5. Conversations : trois profils fictifs dédiés (Meryem, Anas, Ghita), chacun avec un message d'ouverture en français et un message en arabe. Leurs réponses sont simulées localement selon les mots-clés du message, sans clé API IA nécessaire.
+6. Livraison : cinq circonstances fictives d'échec préchargées dans les exemples pour alimenter les analyses (client absent, injoignable, adresse incomplète, report, désaccord sur le montant).
+7. Sécurité démo : les commandes d'exemple ne déclenchent aucun envoi WhatsApp réel.
+
+DÉMARRAGE
+- Installer les dépendances avec : python -m pip install -r requirements.txt
+- Copier .env.example vers .env seulement si vous devez configurer vos propres clés.
+- Lancer : python -m uvicorn main:app --reload
+- Ouvrir : http://127.0.0.1:8000
+- Dans Commandes, cliquer « Charger exemples » pour créer les exemples fictifs et les 3 conversations.
+
+SÉCURITÉ
+- Le paquet ne contient ni .env, ni base SQLite, ni environnement virtuel.
+- Ne publiez jamais vos clés API ou jetons dans GitHub.
+- Les données de conversation et les circonstances marquées Démo sont fictives.
